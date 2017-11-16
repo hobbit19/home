@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+     html {
+	 box-sizing: border-box;
+	 font-size: 16px;
+     }
+     *,
+     *:before,
+     *:after {
+	 box-sizing: inherit;
+     }
+     body {
+	 margin: 0;
+	 background-color: darkseagreen;
+     }
+     .CodeMirror {
+	 height: 100vh;
+     }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/codemirror"></script>
+    <script>
+     var myCodeMirror = CodeMirror(document.body, {
+       value: "function myScript(){return 100;}\n",
+       mode:  "javascript"
+     });
+    </script>
+  </body>
+</html>
