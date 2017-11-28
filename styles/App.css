@@ -1,0 +1,16 @@
+/* 
+   App
+ */
+
+.App.App-codeMirror,
+.App.App-terminal {
+    flex: 1;
+    height: 100%;
+}
+
+/* https://github.com/codemirror/CodeMirror */
+
+.App-codeMirror .CodeMirror,
+.App-terminal .terminal{
+    height: 100%;
+}
