@@ -3,6 +3,14 @@
 */
 
 @import url('./html.css');
+@import url('./nav.css');
+@import url('./style.css');
+
+/* Components */
+@import url('./App.css');
+
+/* Apps */
 @import url('./code-mirror-main.css');
+
 /* TODO implement theming */
 /* @import url('./code-mirror-theme-default.css'); */

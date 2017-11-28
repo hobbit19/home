@@ -47,8 +47,8 @@ in which you can write anything.
     return term;
   }
 
-  const codeMirrors = document.querySelectorAll('.CodeMirror');
-  const terminals = document.querySelectorAll('.Terminal');
+  const codeMirrors = document.querySelectorAll('.App-codeMirror');
+  const terminals = document.querySelectorAll('.App-terminal');
 
   console.log('codeMirrors', codeMirrors)
   console.log('terminals', terminals)

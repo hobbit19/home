@@ -18,27 +18,3 @@ body {
     flex-direction: column;
     height: 100%;
 }
-
-
-/*
-  Navigation
-*/
-.Nav {
-    display: flex;
-    padding-left: 1rem;
-    background-color: lightgray;
-}
-.Nav-item {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-}
-
-/* 
-   Codemirror
-   https://github.com/codemirror/CodeMirror
- */
-
-.CodeMirror {
-    flex: 1;
-}
