@@ -35,16 +35,16 @@ in which you can write anything.
 `
 
   const CodeMirrorApp = function(element) {
-    const myCodeMirror = CodeMirror(element, {
+    return CodeMirror(element, {
       value: documentation,
       mode:  "javascript"
     });
   }
   const TerminalApp = function(element) {
-    const term = new Terminal();
-    term.open(element);
-    term.write('');
-    return term;
+    const terminal = new Terminal();
+    terminal.open(element);
+    terminal.write('**scratch**');
+    return terminal;
   }
 
   const codeMirrors = document.querySelectorAll('.App-codeMirror');
