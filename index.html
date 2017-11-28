@@ -26,9 +26,12 @@
   </head>
 
   <body>
+    <nav class="Nav">
+      <a class="Nav-item" href="./index.html">Home</a>
+      <a class="Nav-item" href="./term/index.html">Term</a>
+    </nav>
     <script src="https://unpkg.com/codemirror"></script>
     <script>
-
      const welcomeMessage = `
 ** web-scratch-buffer **
 https://github.com/hugurp/home
@@ -54,9 +57,10 @@ in which you can write anything.
 - [x] insert this message?
 - [ ] check https://github.com/remotestorage, how to store data?
 - [ ] https://github.com/oskarrough/programmingfonts
+- [ ] shared scratch buffer? public? duplicate data?
 `
      
-     var myCodeMirror = CodeMirror(document.body, {
+     const myCodeMirror = CodeMirror(document.body, {
        value: welcomeMessage,
        mode:  "javascript"
      });

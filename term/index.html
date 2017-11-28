@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/xterm/dist/xterm.css" />
+    <script src="https://unpkg.com/xterm/dist/xterm.js"></script>
+  </head>
+  <body>
+    <div id="Terminal"></div>
+    <script>
+     const welcomeMessage = `
+** web-scratch-terminal **
+`
+     const term = new Terminal();
+     term.open(document.getElementById('#Terminal'));
+     term.write(welcomeMessage)
+    </script>
+  </body>
+</html>
