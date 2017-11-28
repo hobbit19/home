@@ -1,8 +1,6 @@
 /*
-   Main javscript architecture
+   Main javascript architecture
  */
-
-
 
 (function Internet4000Home(){
 
@@ -36,9 +34,30 @@ in which you can write anything.
 - [ ] shared scratch buffer? public? duplicate data?
 `
 
-  const myCodeMirror = CodeMirror(document.body, {
-    value: documentation,
-    mode:  "javascript"
-  });
+  const CodeMirrorApp = function(element) {
+    const myCodeMirror = CodeMirror(element, {
+      value: documentation,
+      mode:  "javascript"
+    });
+  }
+  const TerminalApp = function(element) {
+    const term = new Terminal();
+    term.open(element);
+    term.write('');
+    return term;
+  }
 
+  const codeMirrors = document.querySelectorAll('.CodeMirror');
+  const terminals = document.querySelectorAll('.Terminal');
+
+  console.log('codeMirrors', codeMirrors)
+  console.log('terminals', terminals)
+  
+  if(codeMirrors.length) {
+    [...codeMirrors].map(CodeMirrorApp)
+  }
+
+  if(terminals.length) {
+    [...terminals].map(TerminalApp)
+  }
 })()
