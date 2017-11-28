@@ -1,18 +1,25 @@
 <!doctype html>
 <html>
   <head>
+    <title>Home - Terminal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/xterm/dist/xterm.css" />
     <script src="https://unpkg.com/xterm/dist/xterm.js"></script>
   </head>
   <body>
-    <div id="Terminal"></div>
-    <script>
-     const welcomeMessage = `
-** web-scratch-terminal **
-`
-     const term = new Terminal();
-     term.open(document.getElementById('#Terminal'));
-     term.write(welcomeMessage)
-    </script>
+    <nav class="Nav">
+      <a class="Nav-item" href="../index.html">Home</a>
+      <a class="Nav-item is-active" href="./index.html">Term</a>
+    </nav>
+    <div id="Terminal" class="Terminal"></div>
+    <!-- <script>
+	 const welcomeMessage = `
+	 ** web-scratch-terminal **
+	 `
+	 const term = new Terminal();
+	 term.open(document.getElementById('#Terminal'));
+	 term.write()
+	 </script> -->
   </body>
 </html>
