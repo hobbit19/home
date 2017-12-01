@@ -2,12 +2,11 @@
    Main javascript architecture
  */
 
-(function Internet4000Home(){
+const main = function Internet4000Home(){
 
   console.log('Internet4000Home is running');
   
-  const documentation  = `
-** web-scratch-buffer **
+  const documentation  = `** web-scratch-buffer **
 Home of an empty page.
 https://github.com/hugurp/home`
 
@@ -15,12 +14,13 @@ https://github.com/hugurp/home`
      \`C-e\` opens to a new scratch buffer page
    * in which you can write anything.*/
 
-			      const CodeMirrorApp = function(element) {
+  const CodeMirrorApp = function(element) {
     return CodeMirror(element, {
       value: documentation,
       mode:  "javascript"
     });
   }
+  
   const TerminalApp = function(element) {
     const terminal = new Terminal();
     terminal.open(element);
@@ -41,4 +41,6 @@ https://github.com/hugurp/home`
   if(terminals.length) {
     [...terminals].map(TerminalApp)
   }
-})()
+});
+
+module.exports = main;
