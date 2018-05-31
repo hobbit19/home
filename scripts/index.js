@@ -1,33 +1,31 @@
 /*
-   Main javascript architecture
- */
+	 Main javascript architecture
+	 */
 
-const main = function Internet4000Home(){
 
-  console.log('Internet4000Home is running');
-  
-  const documentation  = `** web-scratch-buffer **
+console.log('Internet4000Home is running');
+
+const documentation  = `** web-scratch-buffer **
 Home of an empty page.
 https://github.com/hugurp/home`
 
-  /* This is a new \`C-t\` like feature, \`C-e\`.
-     \`C-e\` opens to a new scratch buffer page
-   * in which you can write anything.*/
+/* This is a new \`C-t\` like feature, \`C-e\`.
+		 \`C-e\` opens to a new scratch buffer page
+ * in which you can write anything.*/
 
-  const CodeMirrorApp = function(element) {
-    return CodeMirror(element, {
-      value: documentation,
-      mode:  "javascript"
-    });
-  }
-  
-  const codeMirrors = document.querySelectorAll('.App-codeMirror');
+const CodeMirrorApp = function(element) {
+	return CodeMirror(element, {
+		value: documentation,
+		mode:  "javascript"
+	});
+}
 
-  console.log('codeMirrors', codeMirrors)
-  
-  if(codeMirrors.length) {
-    [...codeMirrors].map(CodeMirrorApp)
-  }
-};
+const codeMirrors = document.querySelectorAll('.App-codeMirror');
+let instances
 
-main()
+console.log('codeMirrors', codeMirrors)
+
+if(codeMirrors.length) {
+	instances = [...codeMirrors].map(CodeMirrorApp)
+}
+
