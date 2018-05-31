@@ -4,3 +4,8 @@ import ui from './ui.js'
 
 window.ui = ui
 
+// storage.notes.getLatest()
+// 	.then(note => {
+// 		editor.setValue(note.content)	
+// 	})
+

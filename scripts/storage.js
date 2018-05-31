@@ -34,16 +34,19 @@ var Notes = {
     })
     return {
       exports: {
-        getAll() {
-          // List all items in the "foo/" category/folder
-          privateClient.getAll('')
-						.then(objects => console.log({objects}))
+        getLatest() {
+          return privateClient.getAll('')
+						.then(notes => {
+							var arr = Object.keys(notes)
+							var id = arr[arr.length - 1]
+							return notes[id]
+						})
         },
         add(content) {
           const note = {content}
           // const path = MD5Hash(note)
           const filename = new Date().toString()
-          privateClient
+          return privateClient
             .storeObject('note', filename, note)
             .then(() => console.log('note saved'))
             .catch(err => console.log(err))
