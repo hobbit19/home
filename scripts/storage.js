@@ -1,5 +1,5 @@
 const remoteStorage = new RemoteStorage({
-	logging: true
+	// logging: true
 })
 remoteStorage.access.claim('notes', 'rw')
 
@@ -42,9 +42,9 @@ var Notes = {
         add(content) {
           const note = {content}
           // const path = MD5Hash(note)
-          const path = new Date().toString()
+          const filename = new Date().toString()
           privateClient
-            .storeObject('note', path, note)
+            .storeObject('note', filename, note)
             .then(() => console.log('note saved'))
             .catch(err => console.log(err))
         }
@@ -54,3 +54,5 @@ var Notes = {
 }
 
 remoteStorage.addModule(Notes)
+
+export default remoteStorage

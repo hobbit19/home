@@ -2,15 +2,13 @@
    App
  */
 
-.App.App-codeMirror,
-.App.App-terminal {
+.Editor {
     flex: 1;
     height: 100%;
 }
 
 /* https://github.com/codemirror/CodeMirror */
 
-.App-codeMirror .CodeMirror,
-.App-terminal .terminal{
+.Editor .CodeMirror {
     height: 100%;
 }
