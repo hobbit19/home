@@ -21,26 +21,13 @@ https://github.com/hugurp/home`
     });
   }
   
-  const TerminalApp = function(element) {
-    const terminal = new Terminal();
-    terminal.open(element);
-    terminal.write('**scratch**');
-    return terminal;
-  }
-
   const codeMirrors = document.querySelectorAll('.App-codeMirror');
-  const terminals = document.querySelectorAll('.App-terminal');
 
   console.log('codeMirrors', codeMirrors)
-  console.log('terminals', terminals)
   
   if(codeMirrors.length) {
     [...codeMirrors].map(CodeMirrorApp)
   }
+};
 
-  if(terminals.length) {
-    [...terminals].map(TerminalApp)
-  }
-});
-
-module.exports = main;
+main()

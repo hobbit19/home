@@ -1,29 +1,30 @@
 {
-    "name": "home",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-	"start": "http-server",
-	"watch": "rollup -c -w",
-	"test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/hugurp/home.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-	"url": "https://github.com/hugurp/home/issues"
-    },
-    "homepage": "https://github.com/hugurp/home#readme",
-    "dependencies": {
-	"global": "^4.3.2",
-	"mousetrap": "^1.6.1",
-	"rollup": "^0.52.0"
-    },
-    "devDependencies": {
-	"rollup-plugin-node-resolve": "^3.0.0"
-    }
+	"name": "home",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "http-server",
+		"watch": "rollup -c -w",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hugurp/home.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hugurp/home/issues"
+	},
+	"homepage": "https://github.com/hugurp/home#readme",
+	"dependencies": {
+		"global": "^4.3.2",
+		"http-server": "^0.11.1",
+		"mousetrap": "^1.6.1",
+		"rollup": "^0.52.0"
+	},
+	"devDependencies": {
+		"rollup-plugin-node-resolve": "^3.0.0"
+	}
 }
